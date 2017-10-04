@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Best players:"
+        android:id="@+id/companyView"
+        android:textSize="40sp"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/EasyScores"
+        android:layout_below="@+id/companyView"
+        android:layout_above="@+id/button_back">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:background="@color/dark_gray"
+            android:horizontalSpacing="16dp"
+            android:textSize="40sp"
+            android:layout_margin="16dp"
+            android:choiceMode="none"
+            android:drawSelectorOnTop="false"
+            android:longClickable="false"
+            android:smoothScrollbar="false"
+            android:stackFromBottom="false"
+            android:textFilterEnabled="false"
+            android:dividerHeight="6dp"
+            android:divider="@android:color/black"
+            android:clickable="false"
+            android:headerDividersEnabled="false"
+            android:transcriptMode="disabled" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/MediumScores"
+        android:layout_below="@+id/companyView"
+        android:visibility="gone"
+        android:layout_above="@+id/button_back">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView2"
+            android:layout_centerHorizontal="true"
+            android:background="@color/dark_gray"
+            android:horizontalSpacing="16dp"
+            android:textSize="40sp"
+            android:layout_margin="16dp"
+            android:choiceMode="none"
+            android:drawSelectorOnTop="false"
+            android:longClickable="false"
+            android:smoothScrollbar="false"
+            android:stackFromBottom="false"
+            android:textFilterEnabled="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/HardScores"
+        android:layout_below="@+id/companyView"
+        android:visibility="gone"
+        android:layout_above="@+id/button_back">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView3"
+            android:layout_centerHorizontal="true"
+            android:background="@color/dark_gray"
+            android:horizontalSpacing="16dp"
+            android:textSize="40sp"
+            android:layout_margin="16dp"
+            android:choiceMode="none"
+            android:drawSelectorOnTop="false"
+            android:longClickable="false"
+            android:smoothScrollbar="false"
+            android:stackFromBottom="false"
+            android:textFilterEnabled="false" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/button_background"
+        android:onClick="onClick"
+        android:text="@string/back"
+        android:textSize="40sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+</RelativeLayout>

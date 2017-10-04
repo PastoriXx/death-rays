@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-2956406558690647/9000441615"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_settings"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/button_background"
+        android:enabled="true"
+        android:onClick="onClick"
+        android:text="@string/start"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/button_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/button_background"
+        android:onClick="onClick"
+        android:text="@string/settings"
+        android:textSize="40sp"
+        android:layout_above="@+id/button_scores" />
+
+    <Button
+        android:id="@+id/button_scores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_exit"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/button_background"
+        android:onClick="onClick"
+        android:text="@string/scores"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="false"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="3dp"
+        android:onClick="onClick"
+        android:text="@string/exit"
+        android:textSize="40sp"
+        android:background="@color/dark_gray" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/HardScores"
+        android:layout_alignLeft="@+id/button_start"
+        android:layout_alignRight="@+id/button_start"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        android:focusableInTouchMode="true"
+        android:layout_above="@+id/button_start"
+        android:layout_below="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/companyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="5dp"
+        android:text="@string/help"
+        android:textSize="16sp"
+        android:layout_below="@+id/adView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/help2"
+        android:textSize="16sp"
+        android:layout_below="@+id/companyView"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

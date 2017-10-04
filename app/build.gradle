@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'Nortorix'
+            keyPassword '1qazxsw2'
+            storeFile file('d:/PastoriXx/androidstudiokey.jks')
+            storePassword '1qazxsw2'
+        }
+    }
+    compileSdkVersion 15
+    buildToolsVersion '20.0.0'
+    defaultConfig {
+        applicationId 'com.nortorix.games.deathrays'
+        minSdkVersion 15
+        targetSdkVersion 15
+        versionCode 12
+        versionName '1.2'
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}
